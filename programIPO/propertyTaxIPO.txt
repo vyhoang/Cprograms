@@ -1,0 +1,19 @@
+Program purpose: to calculate the property tax
+
+Input
+- Ask user to input the actual property value.
+- Ask user to input the amount tax per $100 of assessed value.
+
+Process
+- Declare local variables
+- Set assessment rate  = 60%
+- Read actual value.
+- Read tax rate.
+- Calculate assessed value = assessment rate * actual value.
+- Calculate property tax =  tax rate * assessed value.
+
+Output
+- Display actual property value.
+- Display assessed property value.
+- Display property tax.
+
