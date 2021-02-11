@@ -8,8 +8,7 @@
 #include <iomanip>      // Header file needed to use stream manipulators
 
 using namespace std;
-int main()
-{
+int main() {
     double actualValue, assessedValue, taxRate, propertyTax;    // Declare variables
     const double ASSESSMENT_RATE = 0.6;     // Set constant tax assessment with 60%
 
