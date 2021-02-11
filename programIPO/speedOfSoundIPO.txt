@@ -1,0 +1,33 @@
+Program purpose: calculates a sound wave time in fps through a particular medium.
+
+Input
+- Ask use to select a substance from the medium menu:
+1. Air, 2.Water, 3.Steel, 4. Quit program
+- Ask user to enter the number of feet the sound wave will travel.
+
+Process
+- Set named constants to hold speed of sound in fps in each medium:
+AIR = 1100, WATER = 4900, STEEL = 16400
+
+- Set variable choice = the medium user selects.
+
+- Set variable travelDistance = the number of feet user enters.
+
+- Define variable travelTime
+
+- Validate valid menu choice and calculate the travel time of the sound wave in seconds:
+. If choice = 1,
+Calculate travelTime = travelDistance / speed_Air.
+. If choice = 2,
+Calculate travelTime = travelDistance / speed_Water.
+. If choice = 3,
+Calculate travelTime = travelDistance / speed_Steel.
+. If choice  = 4 ,
+Terminate the program
+. If choice != 4,
+Display the message
+
+Output
+- A brief of program description.
+- Display the number of feet and the number of seconds based on the user input.
+
