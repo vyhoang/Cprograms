@@ -1,11 +1,5 @@
 /*  Written by: Vy Hoang
     Program Status: Complete
-    Program: Property Tax
-    This program calculates the annual property tax.
-*/
-
-/*  Written by: Vy Hoang
-    Program Status: Complete
     Program: Sales Bar Chart
     This program generate a bar chart by displaying a row of asterisks for each store's sales.
 */
