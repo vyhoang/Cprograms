@@ -47,24 +47,27 @@ int main ()
 
     }
 
-    // Generate sales data and display an asterisk bar chart for each store
+    // Generate sales data to display a row of asterisks for each store's sales
+    cout << "\n\t  DAILY SALES" << endl;
+    cout << "\t(each * = $100)" << endl;
+
     sales1 = round(sales1 / STAR);
     sales2 = round(sales2 / STAR);
     sales3 = round(sales3 / STAR);
 
     // Store 1
     cout << "\nStore 1: ";
-    for (int a = 0; a < sales1; a++)
+    for (int a = 0; a < int(sales1); a++)
         cout << "*";
 
     // Store 2
     cout << "\nStore 2: ";
-    for (int a = 0; a < sales2; a++)
+    for (int a = 0; a < int(sales2); a++)
         cout << "*";
 
     // Store 3
     cout << "\nStore 3: ";
-    for (int a = 0; a < sales3; a++)
+    for (int a = 0; a < int(sales3); a++)
         cout << "*";
 
     return 0;
