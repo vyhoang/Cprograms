@@ -10,7 +10,7 @@ class InventoryItem
 {
 private:
     int partNum;	         // Part number
-    string description;		//Item description
+    string description;		// Item description
     int onHand;				// Units on hand
     double price;			// Unit price
 
