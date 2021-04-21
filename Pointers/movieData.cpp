@@ -15,9 +15,9 @@
 using namespace std;
 
 // Function prototypes
-void getMovies(int *, int);
-void sortMovies(int *, int);
-void displayMovies(const int *, int);
+void getNumMovies(int *, int);
+void sortListNumMovies(int *, int);
+void displayNumMovies(const int *, int);
 double calAverage(const int *, int);
 
 int main() {
@@ -33,80 +33,78 @@ int main() {
         cin >> numStudents;
     }
 
-    // Dynamically create and allocate the array numMovies
-    int *numMovies = nullptr;
-    numMovies = new int[numStudents];
+    // Dynamically create and allocate the array listMovieNumbers
+    int *listMovieNumbers = nullptr;
+    listMovieNumbers = new int[numStudents];
 
     // Get movies watched for each student
-    getMovies(numMovies, numStudents);
-    // Sort the number of movies in ascending order
-    sortMovies(numMovies, numStudents);
-    // Display the number movies watched for each student
+    getNumMovies(listMovieNumbers, numStudents);
+
+    // Display the sorted list of the number movies watched for each student
     cout << "\nNumber of Movies Watched" << endl;
     cout << "------------------------" << endl;
-    displayMovies(numMovies, numStudents);
+    sortListNumMovies(listMovieNumbers, numStudents);
+    displayNumMovies(listMovieNumbers, numStudents);
     cout << "----------" << endl;
 
-    // Display the average number of movies watched
-    average = calAverage(numMovies, numStudents);
+    // Calculate the average number of movies watched
+    average = calAverage(listMovieNumbers, numStudents);
     cout << fixed << showpoint << setprecision(1);
     cout << "Average  " << average << endl;
 
     // Free the memory
-    delete [] numMovies;
-    numMovies = nullptr;
+    delete [] listMovieNumbers;
+    listMovieNumbers = nullptr;
 
     return 0;
 }
 
-/******************************************************
- * Define the getMovies function
- * to get the number of movies watched by each student
- ******************************************************
-*/
-void getMovies(int *movies, int students) {
+//********************************************************************
+//                         getNumMovies                              *
+// The function accepts the number of movies watched by each student *
+//********************************************************************
+void getNumMovies(int *numMovies, int students) {
     // Get number of movies
     for (int count = 0; count < students; count++) {
         cout << "\nEnter number of movies for student #" << (count+1) << ": ";
-        cin >> movies[count];
+        cin >> numMovies[count];
         // Validate input for number of movies
-        while ((*(movies + count)) < 0) {
+        while ((*(numMovies + count)) < 0) {
             cout << "\nThe number of movies should be a positive integer.\n";
             cout << "Please re-enter the number of movies for student #" << (count+1) << ": ";
-            cin >> movies[count];
+            cin >> numMovies[count];
         }
     }
 }
 
-/*******************************************
- * Define the sortMovies function
- * to sort the list of the number of movies
- *******************************************
-*/
-void sortMovies(int *movies, int students) {
-    sort(movies, movies + students);
+//*******************************************************************
+//                      sortListNumMovies                           *
+// The function sorts the list of the watched movie numbers         *
+// in the ascending order.                                          *
+//*******************************************************************
+void sortListNumMovies(int *numMovies, int students) {
+    sort(numMovies, numMovies + students);
 }
 
-/**********************************************************
- * Define displayMovies function
- * to display the number of movies watched by each student
- **********************************************************
-*/
-void displayMovies(const int *movies, int students) {
+//******************************************************************
+//                     displayNumMovies                            *
+// The function displays the number of movies for each student.    *
+//******************************************************************
+void displayNumMovies(const int *numMovies, int students) {
     for (int count = 0; count < students; count++) {
-        cout << *(movies + count) << endl;
+        cout << *(numMovies + count) << endl;
     }
 }
 
-/*******************************************************
- * Define calAverage function
- * to calculate the average of the total movies watched
- *******************************************************
-*/
-double calAverage(const int *movies, int students) {
+//******************************************************************
+//                     calAverage                                  *
+// The function calculates and returns the average number of       *
+// the watched movies.                                             *
+//******************************************************************
+double calAverage(const int *numMovies, int students) {
     double total = 0;
     for (int count = 0; count < students; count++) {
-        total = total + (*(movies + count));
+        total = total + (*(numMovies + count));
     }
     return (total / students);
 }
