@@ -1,7 +1,7 @@
 /*
     Written by: Vy Hoang
     Program Status: Complete
-    Program: File Decryption
+    Program: File Encryption
     This program works like a filter reading the contents of one file,
     modify each character in the input file into a code,
     and then write the coded characters out to a second file.
